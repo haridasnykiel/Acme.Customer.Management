@@ -43,5 +43,16 @@ namespace Acme.Customer.Management
 
             return name;
         }
+
+        public bool Validate() {
+
+            var isValid = true;
+            
+            if ( string.IsNullOrEmpty(LastName) || string.IsNullOrEmpty(EmailAddress) ) {
+                isValid = false;
+            }
+
+            return isValid;
+        }
     }
 }

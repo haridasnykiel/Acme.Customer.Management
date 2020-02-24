@@ -66,5 +66,43 @@ namespace Acme.Customer.Management.Tests
 
             Assert.AreEqual(expected, actual);
         }
+
+        [Test]
+        public void Validate_EmailNotSet() {
+            var customer = new Customer {
+                LastName = "Nike"
+            };
+
+            var isValid = customer.Validate();
+
+            Assert.False(isValid, "Validate function was true");
+        }
+
+        [Test]
+        public void Validate_LastNameNotSet()
+        {
+            var customer = new Customer
+            {
+                EmailAddress = "hari@gmail.com"
+            };
+
+            var isValid = customer.Validate();
+
+            Assert.False(isValid, "Validate function was true");
+        }
+
+        [Test]
+        public void Validate_EmailAndLastNameAreSet()
+        {
+            var customer = new Customer
+            {
+                EmailAddress = "hari@gmail.com",
+                LastName = "Nike"
+            };
+
+            var isValid = customer.Validate();
+
+            Assert.True(isValid, "Validate function was false");
+        }
     }
 }
