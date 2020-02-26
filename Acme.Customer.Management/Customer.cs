@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Acme.Customer.Management
 {
@@ -8,6 +9,12 @@ namespace Acme.Customer.Management
         public Customer()
         {
             InstanceCount++;
+        }
+
+        public Customer(int cusomterId) 
+        {
+            InstanceCount++;
+            CustomerId = cusomterId;
         }
 
         public int CustomerId { get; private set; }
@@ -53,6 +60,14 @@ namespace Acme.Customer.Management
             }
 
             return isValid;
+        }
+
+        public Customer Get(int customerId) {
+            throw new NotImplementedException();
+        }
+
+        public List<Customer> Get() {
+            throw new NotImplementedException();
         }
     }
 }

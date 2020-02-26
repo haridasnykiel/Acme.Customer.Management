@@ -92,6 +92,16 @@ namespace Acme.Customer.Management.Tests
         }
 
         [Test]
+        public void Validate_LastNameAndEmailNotSet()
+        {
+            var customer = new Customer();
+
+            var isValid = customer.Validate();
+
+            Assert.False(isValid, "Validate function was true");
+        }
+
+        [Test]
         public void Validate_EmailAndLastNameAreSet()
         {
             var customer = new Customer
