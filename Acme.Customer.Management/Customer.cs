@@ -69,5 +69,9 @@ namespace Acme.Customer.Management
         public List<Customer> Get() {
             throw new NotImplementedException();
         }
+
+        public bool Save() {
+            throw new NotImplementedException();
+        }
     }
 }
