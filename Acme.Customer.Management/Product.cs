@@ -5,14 +5,25 @@ namespace Acme.Customer.Management
 {
     public class Product
     {
+
+        public Product()
+        {
+            
+        }
+
+        public Product(int productId)
+        {
+            ProductId = productId;
+        }
+
         public int ProductId { get; private set; }
         public string ProductName { get; set; } 
         public string Description { get; set; }
-        public decimal Price { get; set; }
+        public decimal? CurrentPrice { get; set; } //nullable
         
         public bool Validate() {
             
-            if(string.IsNullOrEmpty(ProductName) || Price <= 0) {
+            if(string.IsNullOrEmpty(ProductName) || CurrentPrice == null) {
                 return false;
             }
             
@@ -20,17 +31,17 @@ namespace Acme.Customer.Management
         }
 
         public Product Get(int productId) {
-            throw new NotImplementedException();
+            return new Product();
         }
 
         public List<Product> GetAll()
         {
-            throw new NotImplementedException();
+            return new List<Product>();
         }
 
         public bool Save()
         {
-            throw new NotImplementedException();
+            return true;
         }
     }
 }

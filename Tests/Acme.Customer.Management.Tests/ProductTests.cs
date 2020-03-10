@@ -9,7 +9,7 @@ namespace Acme.Customer.Management.Tests
             
             var product = new Product {
                 ProductName = "Hat", 
-                Price = 45M
+                CurrentPrice = 45M
             };
 
             var isValid = product.Validate();
@@ -23,7 +23,7 @@ namespace Acme.Customer.Management.Tests
 
             var product = new Product
             {
-                Price = 45M
+                CurrentPrice = 45M
             };
 
             var isValid = product.Validate();
@@ -32,13 +32,12 @@ namespace Acme.Customer.Management.Tests
         }
 
         [Test]
-        public void Validate_PriceIsZero()
+        public void Validate_PriceIsNull()
         {
 
             var product = new Product
             {
-                ProductName = "Hat",
-                Price = 0
+                ProductName = "Hat"
             };
 
             var isValid = product.Validate();
@@ -53,7 +52,7 @@ namespace Acme.Customer.Management.Tests
             var product = new Product
             {
                 ProductName = "Hat",
-                Price = -1
+                CurrentPrice = -1
             };
 
             var isValid = product.Validate();

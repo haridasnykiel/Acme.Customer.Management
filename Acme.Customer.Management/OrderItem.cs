@@ -4,21 +4,31 @@ namespace Acme.Customer.Management
 {
     public class OrderItem
     {
+
+        public OrderItem()
+        {
+            
+        }
+
+        public OrderItem(int orderItemId) {
+            OrderItemId = orderItemId;
+        }
+
         public int OrderItemId { get; set; }
-        public Product Product { get; set; }
+        public int ProductId { get; set; }
         public int Quantity { get; set; }
-        public decimal PurchasePrice { get; set; }
+        public decimal? PurchasePrice { get; set; }
 
         public bool Validate() {
-            return Product != null && Quantity > 0;
+            return ProductId > 0 && Quantity > 0 && PurchasePrice != null;
         }
 
         public OrderItem Get() {
-            throw new NotImplementedException();
+           return new OrderItem();
         }
 
-        public void Save() {
-            throw new NotImplementedException();
+        public bool Save() {
+            return true;
         }
     }
 }

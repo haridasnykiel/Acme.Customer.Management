@@ -11,10 +11,10 @@ namespace Acme.Customer.Management
             InstanceCount++;
         }
 
-        public Customer(int cusomterId) 
+        public Customer(int customerId) 
         {
             InstanceCount++;
-            CustomerId = cusomterId;
+            CustomerId = customerId;
         }
 
         public int CustomerId { get; private set; }
@@ -63,15 +63,15 @@ namespace Acme.Customer.Management
         }
 
         public Customer Get(int customerId) {
-            throw new NotImplementedException();
+            return new Customer();
         }
 
         public List<Customer> Get() {
-            throw new NotImplementedException();
+            return new List<Customer>();
         }
 
         public bool Save() {
-            throw new NotImplementedException();
+            return true;
         }
     }
 }
