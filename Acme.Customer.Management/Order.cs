@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace Acme.Customer.Management {
     public class Order {
@@ -13,8 +14,10 @@ namespace Acme.Customer.Management {
         }
 
         public int OrderId { get; set; }
-        public DateTimeOffset? OrderDate { get; set; } //nullable
-
+        public DateTimeOffset? OrderDate { get; set; } 
+        public Address ShippingAddress { get; set; }
+        public List<OrderItem> OrderItems { get; set; }
+        
         public bool Validate () {
             return OrderDate != null;
         }

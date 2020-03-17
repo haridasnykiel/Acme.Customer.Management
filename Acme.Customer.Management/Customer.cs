@@ -18,15 +18,12 @@ namespace Acme.Customer.Management
         }
 
         public int CustomerId { get; private set; }
-
         public string FirstName { get; set; }
-
         public string LastName { get; set; }
-
         public string EmailAddress { get; set; }
-
+        public Address WorkAddress { get; set; }
+        public Address HomeAddress { get; set; }
         public string Name => GetFullName();
-
         public static int InstanceCount { get; set; }
 
         private string GetFullName() {

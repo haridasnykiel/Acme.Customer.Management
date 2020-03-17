@@ -22,13 +22,5 @@ namespace Acme.Customer.Management
         public bool Validate() {
             return ProductId > 0 && Quantity > 0 && PurchasePrice != null;
         }
-
-        public OrderItem Get() {
-           return new OrderItem();
-        }
-
-        public bool Save() {
-            return true;
-        }
     }
 }
