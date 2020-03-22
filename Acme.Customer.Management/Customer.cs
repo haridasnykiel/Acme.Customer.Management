@@ -40,7 +40,8 @@ namespace Acme.Customer.Management
                 name = $"{LastName}";
             }
 
-            if (string.IsNullOrEmpty(name))
+            if (string.IsNullOrEmpty(name) && 
+            (!string.IsNullOrEmpty(LastName) && !string.IsNullOrEmpty(FirstName)))
             {
                 name = $"{LastName}, {FirstName}";
             }
@@ -57,18 +58,6 @@ namespace Acme.Customer.Management
             }
 
             return isValid;
-        }
-
-        public Customer Get(int customerId) {
-            return new Customer();
-        }
-
-        public List<Customer> Get() {
-            return new List<Customer>();
-        }
-
-        public bool Save() {
-            return true;
         }
     }
 }

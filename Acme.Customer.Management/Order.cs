@@ -21,13 +21,5 @@ namespace Acme.Customer.Management {
         public bool Validate () {
             return OrderDate != null;
         }
-
-        public Order Get (int orderId) {
-            return new Order();
-        }
-
-        public bool Save () {
-            return true;
-        }
     }
 }

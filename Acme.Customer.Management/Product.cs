@@ -29,19 +29,5 @@ namespace Acme.Customer.Management
             
             return true;
         }
-
-        public Product Get(int productId) {
-            return new Product();
-        }
-
-        public List<Product> GetAll()
-        {
-            return new List<Product>();
-        }
-
-        public bool Save()
-        {
-            return true;
-        }
     }
 }
