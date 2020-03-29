@@ -15,8 +15,8 @@ namespace Acme.Customer.Management {
 
         public int OrderId { get; set; }
         public DateTimeOffset? OrderDate { get; set; } 
-        public Address ShippingAddress { get; set; }
-        public List<OrderItem> OrderItems { get; set; }
+        public Address ShippingAddress { get; set; } // Composite relationship
+        public List<OrderItem> OrderItems { get; set; } // Composite relationships
         
         public bool Validate () {
             return OrderDate != null;

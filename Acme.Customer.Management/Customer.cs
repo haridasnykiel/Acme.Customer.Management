@@ -6,23 +6,22 @@ namespace Acme.Customer.Management
     public class Customer
     {
 
-        public Customer()
+        public Customer() : this(0) // This will use the other constructor everytime. This is called constructor chaining.  
         {
-            InstanceCount++;
         }
 
         public Customer(int customerId) 
         {
             InstanceCount++;
             CustomerId = customerId;
+            AddressList = new List<Address>();
         }
 
         public int CustomerId { get; private set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string EmailAddress { get; set; }
-        public Address WorkAddress { get; set; }
-        public Address HomeAddress { get; set; }
+        public List<Address> AddressList { get; set; } // Composite relationship 
         public string Name => GetFullName();
         public static int InstanceCount { get; set; }
 
