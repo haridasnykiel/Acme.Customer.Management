@@ -25,7 +25,7 @@ namespace Acme.Customer.Management.Data
             FirstName = "Hari",
             LastName = "Nike",
             EmailAddress = "something@hotmail.com", 
-            AddressList = _addressRepository.GetAddressesByCustomerId(1).ToList() 
+            AddressList = _addressRepository.GetByCustomerId(1).ToList() 
             // The above establishes a collaboration relationship between the customer repo and address repo class
         };
 

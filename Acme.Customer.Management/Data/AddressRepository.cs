@@ -14,7 +14,7 @@ namespace Acme.Customer.Management.Data
         } 
         
 
-        public IEnumerable<Address> GetAddressesByCustomerId(int customerId) 
+        public IEnumerable<Address> GetByCustomerId(int customerId) 
         {
             var addresses = new List<Address>();
             
