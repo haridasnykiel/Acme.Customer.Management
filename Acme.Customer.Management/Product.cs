@@ -23,7 +23,7 @@ namespace Acme.Customer.Management
         
         public bool Validate() {
             
-            if(string.IsNullOrEmpty(ProductName) || CurrentPrice == null) {
+            if(string.IsNullOrEmpty(ProductName) || CurrentPrice == null || CurrentPrice < 0) {
                 return false;
             }
             

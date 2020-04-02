@@ -9,6 +9,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{E8D4F7FE
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acme.Customer.Management.Tests", "Tests\Acme.Customer.Management.Tests\Acme.Customer.Management.Tests.csproj", "{41848C32-0C5F-4775-A81F-335B83271407}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acme.Customer.Management.Console", "Acme.Customer.Management.Console\Acme.Customer.Management.Console.csproj", "{21EC6326-13E6-438E-A7D0-86510429CB0B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -46,6 +48,18 @@ Global
 		{41848C32-0C5F-4775-A81F-335B83271407}.Release|x64.Build.0 = Release|Any CPU
 		{41848C32-0C5F-4775-A81F-335B83271407}.Release|x86.ActiveCfg = Release|Any CPU
 		{41848C32-0C5F-4775-A81F-335B83271407}.Release|x86.Build.0 = Release|Any CPU
+		{21EC6326-13E6-438E-A7D0-86510429CB0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21EC6326-13E6-438E-A7D0-86510429CB0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21EC6326-13E6-438E-A7D0-86510429CB0B}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{21EC6326-13E6-438E-A7D0-86510429CB0B}.Debug|x64.Build.0 = Debug|Any CPU
+		{21EC6326-13E6-438E-A7D0-86510429CB0B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{21EC6326-13E6-438E-A7D0-86510429CB0B}.Debug|x86.Build.0 = Debug|Any CPU
+		{21EC6326-13E6-438E-A7D0-86510429CB0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21EC6326-13E6-438E-A7D0-86510429CB0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21EC6326-13E6-438E-A7D0-86510429CB0B}.Release|x64.ActiveCfg = Release|Any CPU
+		{21EC6326-13E6-438E-A7D0-86510429CB0B}.Release|x64.Build.0 = Release|Any CPU
+		{21EC6326-13E6-438E-A7D0-86510429CB0B}.Release|x86.ActiveCfg = Release|Any CPU
+		{21EC6326-13E6-438E-A7D0-86510429CB0B}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{41848C32-0C5F-4775-A81F-335B83271407} = {E8D4F7FE-D485-444D-BAA3-D211FD7E6F3B}

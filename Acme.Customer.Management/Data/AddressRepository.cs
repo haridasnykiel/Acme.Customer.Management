@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace Acme.Customer.Management.Data
@@ -6,10 +7,16 @@ namespace Acme.Customer.Management.Data
     {
         public Address Get(int addressId) 
         {
+            object myObject = new object();
+
+            Console.WriteLine($"{myObject.ToString()}");
+            Console.WriteLine($"{MockAddressOne().ToString()}");
+            Console.ReadLine();
+
             if(addressId == 1) {
                 return MockAddressOne();
             }
-
+            
             return new Address();
         } 
         
