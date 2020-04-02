@@ -10,9 +10,30 @@ namespace Acme.Customer.Management.Data
             return new Product();
         }
 
-        public bool Save()
+        public bool Save(Product product)
         {
-            return true;
+            var success = true;
+            if(!product.HasChanged) 
+            {
+                return success;
+            } 
+
+            if(!product.IsValid) 
+            {
+                success = false;
+                return success;
+            }
+
+            if(product.IsNew) 
+            {
+                // call insert sproc
+            }
+            else 
+            {
+                // call update sproc
+            }
+
+            return success;
         }
 
         private Product MockProduct = new Product(1) {

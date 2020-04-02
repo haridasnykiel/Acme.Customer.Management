@@ -19,7 +19,9 @@ namespace Acme.Customer.Management {
         public int CustomerId { get; set; } // Composite relationship
         public int ShippingAddressId { get; set; } // Composite relationship
         public List<OrderItem> OrderItems { get; set; } // Composite relationships
-        
+
+        public override string ToString() => $"({OrderId}) {OrderDate.Value.ToString()}"; // example of polymorphism
+
         public bool Validate () {
             return OrderDate != null;
         }

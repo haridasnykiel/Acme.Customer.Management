@@ -12,7 +12,7 @@ namespace Acme.Customer.Management.Tests
                 CurrentPrice = 45M
             };
 
-            var isValid = product.Validate();
+            var isValid = product.IsValid;
 
             Assert.True(isValid);
         }
@@ -26,7 +26,7 @@ namespace Acme.Customer.Management.Tests
                 CurrentPrice = 45M
             };
 
-            var isValid = product.Validate();
+            var isValid = product.IsValid;
 
             Assert.False(isValid);
         }
@@ -40,7 +40,7 @@ namespace Acme.Customer.Management.Tests
                 ProductName = "Hat"
             };
 
-            var isValid = product.Validate();
+            var isValid = product.IsValid;
 
             Assert.False(isValid);
         }
@@ -55,7 +55,7 @@ namespace Acme.Customer.Management.Tests
                 CurrentPrice = -1
             };
 
-            var isValid = product.Validate();
+            var isValid = product.IsValid;
 
             Assert.False(isValid);
         }

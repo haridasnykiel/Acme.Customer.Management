@@ -26,6 +26,8 @@ namespace Acme.Customer.Management
         public string Name => GetFullName();
         public static int InstanceCount { get; set; }
 
+        public override string ToString() => Name; // example of polymorphism
+
         private string GetFullName() {
 
             string name = "";

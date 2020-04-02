@@ -1,9 +1,10 @@
 using System;
 using System.Collections.Generic;
+using Acme.Customer.Management.Base;
 
 namespace Acme.Customer.Management
 {
-    public class Product
+    public class Product : EntityBase 
     {
 
         public Product()
@@ -20,10 +21,12 @@ namespace Acme.Customer.Management
         public string ProductName { get; set; } 
         public string Description { get; set; }
         public decimal? CurrentPrice { get; set; } //nullable
+
+        public override string ToString() => ProductName; // override Object.ToString(). Also an example of polymorphism.
         
-        public bool Validate() {
+        protected override bool Validate() {
             
-            if(string.IsNullOrEmpty(ProductName) || CurrentPrice == null || CurrentPrice < 0) {
+            if(string.IsNullOrEmpty(ProductName) || CurrentPrice == null || CurrentPrice <= 0) {
                 return false;
             }
             
