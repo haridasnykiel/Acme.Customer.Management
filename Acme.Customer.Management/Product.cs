@@ -1,12 +1,10 @@
-using System;
-using System.Collections.Generic;
+using Acme.Common.Extensions;
 using Acme.Customer.Management.Base;
 
 namespace Acme.Customer.Management
 {
     public class Product : EntityBase 
     {
-
         public Product()
         {
             
@@ -17,8 +15,14 @@ namespace Acme.Customer.Management
             ProductId = productId;
         }
 
+        private string _productName;
+
         public int ProductId { get; private set; }
-        public string ProductName { get; set; } 
+        public string ProductName 
+        { 
+            get { return _productName.SplitName(); } 
+            set { _productName = value; } 
+        } 
         public string Description { get; set; }
         public decimal? CurrentPrice { get; set; } //nullable
 

@@ -18,13 +18,13 @@ namespace Acme.Customer.Management.Console
             var product = productRepo.Get(1);
             System.Console.WriteLine(product.ToString());
 
-            var customerRepo = new CustomerRepository();
-            var customer = customerRepo.Get(1);
-            System.Console.WriteLine(customer.ToString());
+            // var customerRepo = new CustomerRepository();
+            // var customer = customerRepo.Get(1);
+            // System.Console.WriteLine(customer.ToString());
 
-            var orderRepo = new OrderRepository();
-            var order = orderRepo.Get(1);
-            System.Console.WriteLine(order.ToString());
+            // var orderRepo = new OrderRepository();
+            // var order = orderRepo.Get(1);
+            // System.Console.WriteLine(order.ToString());
         }
     }
 }

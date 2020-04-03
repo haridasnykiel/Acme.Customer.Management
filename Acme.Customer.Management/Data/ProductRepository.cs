@@ -37,7 +37,7 @@ namespace Acme.Customer.Management.Data
         }
 
         private Product MockProduct = new Product(1) {
-            ProductName = "metal",
+            ProductName = "MetalSpoon",
             CurrentPrice = 45M
         };
     }

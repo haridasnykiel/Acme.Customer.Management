@@ -11,7 +11,7 @@ namespace Acme.Customer.Management.Tests
             var productRepo = new ProductRepository(); 
             Product expectedProduct = new Product(1)
             {
-                ProductName = "metal",
+                ProductName = "MetalSpoon",
                 CurrentPrice = 45M
             };
 
@@ -20,6 +20,17 @@ namespace Acme.Customer.Management.Tests
             Assert.AreEqual(expectedProduct.ProductId, actualProduct.ProductId);
             Assert.AreEqual(expectedProduct.ProductName, actualProduct.ProductName);
             Assert.AreEqual(expectedProduct.CurrentPrice, actualProduct.CurrentPrice);
+        }
+
+        [Test]
+        public void Get_NameWillIncludeSpaceBeforeCapital() 
+        {
+            var productRepo = new ProductRepository();
+            var expectedName = "Metal Spoon";
+
+            var actualProduct = productRepo.Get(1);
+
+            Assert.AreEqual(actualProduct.ProductName, expectedName);
         }
 
         [Test]
