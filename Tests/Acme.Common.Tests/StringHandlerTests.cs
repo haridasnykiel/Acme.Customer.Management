@@ -5,7 +5,7 @@ namespace Acme.Common.Tests {
     public class StringHandlerTests {
 
         [Test]
-        public void SplitName_WhiteSpaceAddedAfterEachCapitalLetter () {
+        public void SplitName_WhiteSpaceAddedAfterEachCapitalLetter() {
             var name = "MetalSpoon";
 
             var splitName = name.SplitName ();
@@ -14,12 +14,21 @@ namespace Acme.Common.Tests {
         }
 
         [Test]
-        public void SplitName_WhiteSpaceNotAddedToFirstLetter () {
+        public void SplitName_WhiteSpaceNotAddedToFirstLetter() {
             var name = "Metal";
 
             var splitName = name.SplitName ();
 
-            Assert.False(splitName.Contains(" "));
+            Assert.False (splitName.Contains (" "));
+        }
+
+        [Test]
+        public void SplitName_NoWhiteSpaceIfAlreadyExists() {
+            var name = "Metal Spoon";
+
+            var splitName = name.SplitName ();
+
+            Assert.False(splitName.Contains ("  "));
         }
     }
 }

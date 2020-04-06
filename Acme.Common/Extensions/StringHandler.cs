@@ -6,6 +6,11 @@ namespace Acme.Common.Extensions
 {
     public static class StringHandler
     {
+        /// <summary>
+        /// Splits the product name by capital letter. Ignores the first letter. 
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
         public static string SplitName(this string name) 
         {
             if (string.IsNullOrWhiteSpace(name))
