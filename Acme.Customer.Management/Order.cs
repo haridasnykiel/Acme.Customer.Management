@@ -1,15 +1,19 @@
 using System;
 using System.Collections.Generic;
+using Acme.Customer.Management.Base;
 
 namespace Acme.Customer.Management {
-    public class Order {
+
+    public class Order : EntityBase
+    {
 
         public Order() : this(0)
         {
             
         }
 
-        public Order(int orderId) {
+        public Order(int orderId) 
+        {
             OrderId = orderId;
             OrderItems = new List<OrderItem>();
         }
@@ -22,7 +26,8 @@ namespace Acme.Customer.Management {
 
         public override string ToString() => $"({OrderId}) {OrderDate.Value.ToString()}"; // example of polymorphism
 
-        public bool Validate () {
+        public override bool Validate () 
+        {
             return OrderDate != null;
         }
     }

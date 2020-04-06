@@ -1,8 +1,9 @@
 using System;
+using Acme.Customer.Management.Base;
 
 namespace Acme.Customer.Management
 {
-    public class OrderItem
+    public class OrderItem : EntityBase
     {
 
         public OrderItem()
@@ -19,7 +20,7 @@ namespace Acme.Customer.Management
         public int Quantity { get; set; }
         public decimal? PurchasePrice { get; set; }
 
-        public bool Validate() {
+        public override bool Validate() {
             return ProductId > 0 && Quantity > 0 && PurchasePrice != null;
         }
     }

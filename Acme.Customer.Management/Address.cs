@@ -1,6 +1,8 @@
+using Acme.Customer.Management.Base;
+
 namespace Acme.Customer.Management
 {
-    public class Address
+    public class Address : EntityBase
     {
 
         public Address()
@@ -22,7 +24,7 @@ namespace Acme.Customer.Management
         public string Postcode { get; set; }
         public string Country { get; set; }
 
-        public bool Validate() {
+        public override bool Validate() {
             return 
             !string.IsNullOrEmpty(StreetLineOne) && 
             !string.IsNullOrEmpty(City) && 

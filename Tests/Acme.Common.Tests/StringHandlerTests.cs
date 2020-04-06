@@ -8,7 +8,7 @@ namespace Acme.Common.Tests {
         public void SplitName_WhiteSpaceAddedAfterEachCapitalLetter() {
             var name = "MetalSpoon";
 
-            var splitName = name.SplitName ();
+            var splitName = StringHandler.SplitName(name);
 
             Assert.AreEqual ("Metal Spoon", splitName);
         }

@@ -14,7 +14,7 @@ namespace Acme.Customer.Management.Base
         public bool IsValid => Validate();
         public EntityStateOption EntityState { get; set; }
 
-        protected abstract bool Validate();
+        public abstract bool Validate();
 
     }
 }
