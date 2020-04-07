@@ -42,13 +42,8 @@ namespace Acme.Customer.Management {
             return true;
         }
 
-        public string Log () 
-        {
-            var log = $"ID: {ProductId} \n" +
-                $"Name: {ProductName} \n" +
-                $"Current Price: {CurrentPrice} \n";
-
-            return log;
-        }
+        public string Log () =>
+            $"{nameof(Product)} - ID: {ProductId} - {ProductName} - £{CurrentPrice}";
+        
     }
 }

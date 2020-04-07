@@ -18,7 +18,9 @@ namespace Acme.Customer.Management.Data
         }
 
         private Order MockOrder = new Order(1) {
-            OrderDate = DateTime.Now.AddDays(1)
+            OrderDate = DateTime.Now.AddDays(1),
+            CustomerId = 1,
+            ShippingAddressId = 1
         };
     }
 }

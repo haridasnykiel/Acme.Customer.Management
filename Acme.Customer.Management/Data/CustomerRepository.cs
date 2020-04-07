@@ -22,6 +22,7 @@ namespace Acme.Customer.Management.Data
 
         private Customer MockCustomer => new Customer(1)
         {
+            CustomerType = 2,
             FirstName = "Hari",
             LastName = "Nike",
             EmailAddress = "something@hotmail.com", 

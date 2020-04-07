@@ -1,10 +1,11 @@
 using System;
 using System.Collections.Generic;
+using Acme.Common.Interfaces;
 using Acme.Customer.Management.Base;
 
 namespace Acme.Customer.Management {
 
-    public class Order : EntityBase
+    public class Order : EntityBase, ILoggable
     {
 
         public Order() : this(0)
@@ -26,9 +27,13 @@ namespace Acme.Customer.Management {
 
         public override string ToString() => $"({OrderId}) {OrderDate.Value.ToString()}"; // example of polymorphism
 
-        public override bool Validate () 
+        public override bool Validate()
         {
             return OrderDate != null;
         }
+
+        public string Log() =>
+            $"{nameof(Order)} - ID: {OrderId} - {OrderDate} - customerId: {CustomerId}";
+        
     }
 }

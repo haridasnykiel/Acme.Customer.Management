@@ -1,7 +1,6 @@
 namespace Acme.Common.Interfaces
 {
-    public interface ILoggable
-    {
-         string Log();
+    public interface ILoggable {
+        string Log ();
     }
 }

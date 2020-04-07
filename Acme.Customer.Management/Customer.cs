@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Acme.Common.Interfaces;
 using Acme.Customer.Management.Base;
 
@@ -40,14 +39,9 @@ namespace Acme.Customer.Management {
             return isValid;
         }
 
-        public string Log () { 
-            var log = $"ID: {CustomerId} \n" +
-                $"Name: {GetFullName()} \n" +
-                $"Email: {EmailAddress} \n" +
-                $"Type: {CustomerType} \n";
-
-            return log;
-        }
+        public string Log () =>
+            $"{nameof(Customer)} - ID: {CustomerId} - {GetFullName()} - {EmailAddress} - Type: {CustomerType}";
+        
 
         private string GetFullName () {
 
